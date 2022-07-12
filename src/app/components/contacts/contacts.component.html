@@ -1,0 +1,49 @@
+<app-page-header title="Contacts" icon="bi bi-people"></app-page-header>
+
+<div class="input-group mt-4">
+  <span class="input-group-text" id="basic-addon1">Search</span>
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Search a contact by name"
+    aria-label="Username"
+    aria-describedby="basic-addon1"
+  />
+</div>
+
+<div *ngIf="contacts.length; else noContacts">
+  <table class="table table-bordered align-middle mt-3">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Birthday</th>
+        <th>Phones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts; index as indx">
+        <td>{{ indx + 1 }}</td>
+        <td>{{ contact.name }}</td>
+        <td>
+          <a [href]="'mailto:' + contact.email"> {{ contact.email }}</a>
+        </td>
+        <td>{{ contact.birthday }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let phone of contact.phones">
+              <a [href]="'tel:' + phone">
+                {{ phone }}
+              </a>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noContacts>
+  <h1>No contacts</h1>
+</ng-template>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "company-crm-firebase": {
+      "hosting": {
+        "home-work": [
+          "company-crm-firebase"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "company-crm-firebase"
+  }
+}
