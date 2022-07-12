@@ -13,7 +13,6 @@ import { CustomersEditComponent } from './components/customers-edit/customers-ed
 import { CustomersNewComponent } from './components/customers-new/customers-new.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth, getAuth } from '@angular/fire/auth';
@@ -22,7 +21,6 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { FormsModule } from '@angular/forms';
 import { SignOutDirective } from './directives/sign-out.directive';
 import { CustomersFilterPipe } from './pipes/customers-filter.pipe';
-import { ContactsFilterPipe } from './pipes/contacts-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,11 +35,9 @@ import { ContactsFilterPipe } from './pipes/contacts-filter.pipe';
     CustomersNewComponent,
     DashboardComponent,
     FooterComponent,
-    PageNotFoundComponent,
     PageHeaderComponent,
     SignOutDirective,
     CustomersFilterPipe,
-    ContactsFilterPipe,
   ],
   imports: [
     BrowserModule,
